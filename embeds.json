@@ -27,6 +27,10 @@
         {
           "name": "stop",
           "value": "*stops the current schedule, if any exists*\nUsage: b!stop"
+        },
+        {
+          "name": "count, num",
+          "value": "*check how many bidens have been sent since it began*\nUsage: b!count"
         }
       ]
     }
