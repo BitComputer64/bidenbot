@@ -5,7 +5,6 @@ const cron = require('cron');
 const cronJob = cron.CronJob;
 
 const embeds = require('./embeds.json');
-const token = process.env.BOT_TOKEN;
 
 const prefix = "b!";
 
@@ -114,4 +113,4 @@ bot.on('message', function(message) {
 	}
 });
 
-bot.login(token);
+bot.login(process.env.BOT_TOKEN);
