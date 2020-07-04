@@ -1,0 +1,16 @@
+{
+  "name": "biden",
+  "version": "1.0.0",
+  "description": "biden",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BitComputer64",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "discord.js": "^12.2.0"
+  }
+}

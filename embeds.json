@@ -1,0 +1,49 @@
+{
+  "help": {
+    "embed": {
+      "title": "**Command List**",
+      "color": 111111,
+      "fields": [
+        {
+          "name": "help, info",
+          "value": "*list all commands*"
+        },
+        {
+          "name": "frequency, freq",
+          "value": "*set how often the video is sent, in minutes*\nUsage: b!frequency <minutes>"
+        },
+        {
+          "name": "video, url, vid",
+          "value": "*set the url of an alternate video to send, or to reset video to default*\nUsage: b!video <url>, b!video default"
+        },
+        {
+          "name": "channel, chan, sendin, set",
+          "value": "*set the channel in which the video should be sent to the current channel*\nUsage: b!channel"
+        },
+        {
+          "name": "start",
+          "value": "*begins the defined message send schedule*\nUsage: b!start"
+        },
+        {
+          "name": "stop",
+          "value": "*stops the current schedule, if any exists*\nUsage: b!stop"
+        }
+      ]
+    }
+  },
+  "setting": {
+    "embed": {
+      "title": "",
+      "footer": {
+        "text": ""
+      },
+      "color": 111111,
+      "fields": [
+        {
+          "name": "",
+          "value": ""
+        }
+      ]
+    }
+  }
+}
