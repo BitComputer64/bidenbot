@@ -5,7 +5,7 @@ const cron = require('cron');
 const cronJob = cron.CronJob;
 
 const embeds = require('./embeds.json');
-const {token, api, port} = require('./auth.json');
+const token = process.env.BOT_TOKEN;
 
 const prefix = "b!";
 
