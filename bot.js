@@ -12,10 +12,11 @@ var job = null;
 var mins = 0;
 var video = { files: ['./video/Joe_Biden.mp4'] };
 var channel = null;
+var count = 0;
 
 bot.on('ready', () => {
 	console.log('Bot is online.');
-	bot.user.setActivity('b!help, b!info', { type: 'LISTENING' });
+	bot.user.setActivity('b!help, b!info | Sent ' + count + ' bidens so far.', { type: 'LISTENING' });
 });
 
 bot.on('message', function(message) {
@@ -97,10 +98,17 @@ bot.on('message', function(message) {
 				if (job != null) { return message.channel.send("Schedule has already begun!"); }
 				job = new cronJob(`0 */${mins} * * * *`, function() {
 					channel.send(video);
+					count++;
+					bot.user.setActivity('b!help, b!info | Sent ' + count + ' bidens so far.', { type: 'LISTENING' });
 				});
 				job.start();
 				message.channel.send("Schedule started.");
 			break;
+
+			case "count":
+			case "num":
+				message.channel.send(`Sent ${count} bidens so far.`);
+			break; 
 
 			case "stop":
 				if (!message.member.hasPermission('MANAGE_GUILD') && !message.member.hasPermission('ADMINISTRATOR')) { return message.channel.send(`Sorry ${message.author.username}, you don't seem to have the "Manage Server" permission. Only users with that role can use this command.`); }
